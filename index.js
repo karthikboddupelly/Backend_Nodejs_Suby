@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors());
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 dotEnv.config();
 
@@ -32,6 +32,6 @@ app.listen(PORT , ()=>{
     console.log(`Server is running on port ${PORT}`);
 });
 
-app.use('/home',(req,res) => {
+app.use('/',(req,res) => {
     res.send("<h1>Welcome to Suby</h1>")
 });
