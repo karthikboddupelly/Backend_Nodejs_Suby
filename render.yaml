@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: backend-nodejs-suby
+    env: node
+    repo: https://github.com/karthikboddupelly/Backend_Nodejs_Suby
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
